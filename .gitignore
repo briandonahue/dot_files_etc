@@ -1,4 +1,4 @@
-*/**
+*/*
 ntuser.*
 NTUSER.*
 .luke
@@ -7,5 +7,5 @@ NTUSER.*
 _viminfo
 !vimfiles/**
 !AppData/Roaming/Console/console.xml
-
+!autohotkey/**
 
