@@ -1,0 +1,11 @@
+*/**
+ntuser.*
+NTUSER.*
+.luke
+.bash_history
+.gitconfig
+_viminfo
+!vimfiles/**
+!AppData/Roaming/Console/console.xml
+
+
