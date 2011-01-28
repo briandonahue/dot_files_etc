@@ -43,7 +43,7 @@
 		<hotkey ctrl="0" shift="0" alt="1" extended="0" code="115" command="exit"/>
 		<hotkey ctrl="1" shift="0" alt="0" extended="0" code="112" command="newtab1"/>
 		<hotkey ctrl="1" shift="0" alt="0" extended="0" code="113" command="newtab2"/>
-		<hotkey ctrl="1" shift="0" alt="0" extended="0" code="114" command="newtab3"/>
+		<hotkey ctrl="0" shift="1" alt="0" extended="0" code="114" command="newtab3"/>
 		<hotkey ctrl="1" shift="0" alt="0" extended="0" code="115" command="newtab4"/>
 		<hotkey ctrl="1" shift="0" alt="0" extended="0" code="116" command="newtab5"/>
 		<hotkey ctrl="1" shift="0" alt="0" extended="0" code="117" command="newtab6"/>
@@ -102,6 +102,15 @@
 		<tab title="Windows" use_default_icon="0">
 			<console shell="C:\Windows\SysWOW64\cmd.exe" init_dir="c:\development\sothebys\hercules" run_as_user="0" user=""/>
 			<cursor style="0" r="0" g="0" b="255"/>
+			<background type="0" r="0" g="0" b="0">
+				<image file="" relative="0" extend="0" position="0">
+					<tint opacity="0" r="0" g="0" b="0"/>
+				</image>
+			</background>
+		</tab>
+		<tab title="Visual Studio Cmd Line" use_default_icon="0">
+			<console shell="%comspec% /k &quot;&quot;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat&quot;&quot; x86" init_dir="c:\development\sothebys\hercules" run_as_user="0" user=""/>
+			<cursor style="0" r="255" g="255" b="255"/>
 			<background type="0" r="0" g="0" b="0">
 				<image file="" relative="0" extend="0" position="0">
 					<tint opacity="0" r="0" g="0" b="0"/>
