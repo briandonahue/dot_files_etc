@@ -11,4 +11,6 @@ _viminfo
 !AppData/Roaming/Console/console.xml
 !autohotkey/**
 *.swp
+*.exe
+
 

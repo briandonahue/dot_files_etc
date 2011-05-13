@@ -2,6 +2,8 @@
 
 git_bundles = [ 
   "git://github.com/astashov/vim-ruby-debugger.git",
+  "git://github.com/kchmck/vim-coffee-script.git", 
+  "git://github.com/mattn/gist-vim.git", 
   "git://github.com/msanders/snipmate.vim.git",
   "git://github.com/scrooloose/nerdtree.git",
   "git://github.com/scrooloose/nerdcommenter.git",
@@ -26,7 +28,6 @@ git_bundles = [
 
 vim_org_scripts = [
   ["IndexedSearch", "7062",  "plugin"],
-  ["gist",          "12732", "plugin"],
   ["jquery",        "12107", "syntax"],
 ]
 
