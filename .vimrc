@@ -142,8 +142,8 @@ map <silent> ,f :execute 'CommandTFlush'<CR>
 if has("gui_running")
     set guifont=DejaVu_Sans_Mono:h12
     set antialias
-
-    colorscheme vividchalk
+    colorscheme solarized
+    set background=dark
 
     if !exists("g:vimrcloaded")
         winpos 0 0
