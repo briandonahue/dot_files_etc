@@ -1,0 +1,39 @@
+[attr]utf16 diff merge -crlf
+
+*           text=auto
+
+*.png				binary
+*.jpg				binary
+*.jpeg			binary
+*.swf				binary
+*.gif				binary
+*.dll				binary
+*.snk				binary
+*.mp3				binary
+
+*.cs				text	diff=csharp
+*.cshtml		text
+*.csproj		text	merge=union
+*.asax			text
+*.aspx			text
+*.ascx			text
+*.resx			text
+*.master		text
+*.tt				text
+*.js		  	text
+*.html	  	text
+*.htm		  	text
+*.coffee		text
+*.css				text
+*.sass			text
+*.scss			text
+*.xaml			text
+*.sln				text
+*.rb				text
+*.config		text
+*.erb				text
+*.sql				utf16
+*.txt				text
+*.xml				text
+
+*.sln text eol=crlf merge=union 

@@ -18,6 +18,13 @@ filetype indent on
 " ignore swap and sass temp files
 set wildignore=*.swp,*.scssc,*.sassc
 
+" move swap files to tempt directory
+if has("win32") || has("win64")
+   set directory=$TMP
+else
+   set directory=/tmp
+end
+
 " no wrap by default
 set nowrap
 
@@ -142,16 +149,20 @@ map <silent> ,f :execute 'CommandTFlush'<CR>
 if has("gui_running")
     set guifont=DejaVu_Sans_Mono:h12
     set antialias
-    colorscheme solarized
+    colorscheme vividchalk
     set background=dark
 
     if !exists("g:vimrcloaded")
         winpos 0 0
         if ! &diff
-            winsize 130 90
+            winsize 140 90
         else
             winsize 227 90
         endif
         let g:vimrcloaded = 1
     endif
+
+if has("statusline")
+ set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+endif
 endif

@@ -1,0 +1,46 @@
+[core]
+	autocrlf = true
+	ignorecase = true
+  editor = "vim"
+[user]
+	name = Brian Donahue
+	email = brian.donahue@vitreosolutions.com
+[gui]
+	recentrepo = C:/development/sothebys/atlas
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	df = diff
+	lg = log -p
+  pr = pull --rebase
+  lr = "log --date=iso --reverse --pretty='Author Date: %ad%nCommit Date: %cd%nAuthor: %an%n%s%n%b'"
+
+
+[merge]
+  keepBackup = false
+	tool = diffmerge
+
+
+[difftool]
+	prompt = false
+[push]
+	default = matching
+[credential]
+[mergetool "tortoisemerge"]
+	path = C:\\Program Files\\TortoiseGit\\bin\\tortoisegitmerge.exe
+  keepTemporaries = false
+  keepBackup = false
+[difftool "sourcetree"]
+	cmd = 'C:/Program Files (x86)/Beyond Compare 3/BComp.exe' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files/SourceGear/Common/DiffMerge/sgdm.exe' -merge -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	trustExitCode = true
+[mergetool "diffmerge"]
+  cmd = 'C:\\Program Files\\SourceGear\\Common\\DiffMerge\\sgdm.exe' --merge -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" --title1="Mine" --title2="Merged" --title3="Theirs"
+  keepTemporaries = false
+  keepBackup = false
+	trustExitCode = false
+[credential]
+	helper = !'C:\\Users\\Brian\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
