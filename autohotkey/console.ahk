@@ -14,7 +14,7 @@ IfWinExist ahk_class Console_2_Main
           }
 }
 else
-    run "c:\software\Console2\Console.exe"
+    run "C:\ProgramData\chocolatey\bin\Console.exe"
 DetectHiddenWindows, off
 return
 
@@ -34,7 +34,7 @@ IfWinExist ahk_class Console_2_Main
           }
 }
 else
-    run "c:\software\Console2\consolecygwin"
+    run "C:\ProgramData\chocolatey\bin\consolecygwin"
 DetectHiddenWindows, off
 return
 

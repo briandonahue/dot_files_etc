@@ -1,0 +1,19 @@
+nnoremap <esc> :noh<cr>
+
+" Use Tab and Shift-Tab to indent in visual (like in normal, but keep selection)
+" Note: this can probably be done with Select mode, but I don't use that.
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <LT>gv
+
+" Use tab and shift-tab for indent in normal mode
+nmap <Tab> >>
+nmap <S-Tab> <<
+
+map <C-p> :vsc ReSharper.ReSharper_ParameterInfo_Show<cr>
+map <C-w> :vsc ReSharper.ReSharper_ExtendSelection<cr>
+imap <C-p> <esc>:vsc ReSharper.ReSharper_ParameterInfo_Show<cr>i
+map <C-b> :vsc ReSharper.ReSharper_GotoDeclaration<cr>
+map <C-A-b> :vsc ReSharper.ReSharper_GotoInheritors<cr>
+map <C-A-S-b> :vsc ReSharper.ReSharper_GotoImplementation<cr>
+
+
