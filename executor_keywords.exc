@@ -1,0 +1,345 @@
+[W0]
+keywords=addremove
+command=control.exe
+comment=Add/remove programs
+param=appwiz.cpl
+
+[W1]
+keywords=admin
+command=control.exe
+comment=Administrative tools
+param=admintools
+
+[W2]
+keywords=alarm
+command=$ALARM$
+comment=A simple alarm
+
+[W3]
+keywords=apps
+command=$APPS$
+comment=List applications
+
+[W4]
+keywords=clipboard
+command=$CLIPBOARD$
+comment=View text from clipboard
+one=1
+
+[W5]
+keywords=control
+command=control.exe
+comment=Opens the control panel
+
+[W6]
+keywords=define
+command=http://dictionary.reference.com/browse/$U$
+comment=Online dictionary
+
+[W7]
+keywords=desktop
+command=control.exe
+comment=Display background
+param=desk.cpl ,0
+
+[W8]
+keywords=devices
+command=devmgmt.msc
+comment=Device manager
+
+[W9]
+keywords=display
+command=control.exe
+comment=Display settings
+param=desk.cpl ,3
+
+[W10]
+keywords=email
+command=mailto:$P$
+comment=Send email
+
+[W11]
+keywords=find
+command=search-ms:query=$p$
+comment=Windows instant search (if available)
+
+[W12]
+keywords=firewall
+command=control.exe
+comment=Windows firewall config
+param=firewall.cpl
+
+[W13]
+keywords=google
+command=http://www.google.com/search?hl=en&q=$U$
+comment=Google search
+
+[W14]
+keywords=groups
+command=http://groups.google.com/groups?q=$U$
+path=Search google groups
+comment=Search google groups
+
+[W15]
+keywords=hood
+command=explorer.exe
+comment=My network places (Network Neighborhood)
+param=::{208D2C60-3AEA-1069-A2D7-08002B30309D}
+
+[W16]
+keywords=ie
+command=IEXPLORE.EXE
+comment=Open Internet Explorer
+param=$P$
+
+[W17]
+keywords=ip
+command=$SHOWIP$
+comment=Get machine IP address (list if more)
+
+[W18]
+keywords=ipconfig
+command=cmd.exe
+comment=IPconfig
+param=/K ipconfig $P$
+
+[W19]
+keywords=lastfm
+command=http://www.last.fm/listen/artist/$U$/similarartists?hp=1
+comment=Last.fm [type artist/band]
+
+[W20]
+keywords=listgroups
+command=$GROUPS$
+comment=List keyword groups
+
+[W21]
+keywords=mail
+command=msimn.exe
+comment=Outlook
+
+[W22]
+keywords=media
+command=$MEDIA$
+comment=Default media player
+
+[W23]
+keywords=movie
+command=http://www.imdb.com/find?s=all&q=$U$
+comment=IMDb search for movies
+
+[W24]
+keywords=mute
+command=$MUTE$
+comment=Mute and unmute windows master volume
+
+[W25]
+keywords=mycomp
+command=explorer.exe
+comment=Opens my computer
+param=::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
+
+[W26]
+keywords=mydoc
+command=explorer.exe
+comment=Opens my documents
+param=::{450D8FBA-AD25-11D0-98A8-0800361B1103}
+
+[W27]
+keywords=myspace
+command=http://sads.myspace.com//Modules/Search/Pages/Search.aspx?fuseaction=advancedFind.results&searchtarget=tms&searchtype=myspace&t=tms&get=1&websearch=1&searchBoxID=HeaderWebResults&searchString=$U$&q=$U$
+comment=MySpace search
+
+[W28]
+keywords=netstat
+command=cmd.exe
+comment=Netstat
+param=/K netstat $P$
+
+[W29]
+keywords=network
+command=control.exe
+comment=Network connections
+param=ncpa.cpl
+
+[W30]
+keywords=next
+command=$NEXT$
+comment=Next media
+
+[W31]
+keywords=ping
+command=cmd.exe
+comment=Ping
+param=/K ping $P$
+
+[W32]
+keywords=play
+command=$PLAY$
+comment=Play media
+
+[W33]
+keywords=previous
+command=$PREV$
+comment=Previous media
+
+[W34]
+keywords=printers
+command=control.exe
+comment=Printers and fax
+param=printers.cpl
+
+[W35]
+keywords=recycle
+command=explorer.exe
+comment=Recycle bin
+param=::{645FF040-5081-101B-9F08-00AA002F954E}
+
+[W36]
+keywords=remote
+command=C:\WINDOWS\system32\mstsc.exe
+path=%HOMEDRIVE%%HOMEPATH%
+comment=Remote Desktop Connection
+
+[W37]
+keywords=recent
+command=$RECENT$
+comment=List recent documents
+
+[W38]
+keywords=refreshindex
+command=$REFRESHINDEX$
+comment=Will refresh the index now
+
+[W39]
+keywords=screensaver
+command=$SCREENSAVER$
+comment=Start screensaver
+
+[W40]
+keywords=search
+command=$SEARCH$
+comment=Open windows search
+
+[W41]
+keywords=services
+command=services.msc
+comment=Windows services
+
+[W42]
+keywords=stop
+command=$STOP$
+comment=Stop media
+
+[W43]
+keywords=stopwatch
+command=$STOPWATCH$
+comment=A simple stopwatch
+
+[W44]
+keywords=system
+command=control.exe
+comment=System (same as properties on my computer)
+param=sysdm.cpl
+
+[W45]
+keywords=task
+command=taskmgr.exe
+comment=Opens the taskmanager
+
+[W46]
+keywords=textclean
+command=$TEXTCLEAN$
+comment=Will strip formatting of current clipboard text
+
+[W47]
+keywords=time
+command=$TIME$
+comment=Get time and date
+
+[W48]
+keywords=timer
+command=$TIMER$
+comment=A simple timer
+
+[W49]
+keywords=tracert
+command=cmd.exe
+comment=Trace route
+param=/K tracert $P$
+
+[W50]
+keywords=wiki
+command=http://en.wikipedia.org/wiki/Special:Search?search=$U$&go=Go
+comment=Wikipedia search
+
+[W51]
+keywords=youtube
+command=http://www.youtube.com/results?search_query=$U$
+comment=YouTube search
+
+[W52]
+keywords=?emptyrecyclebin
+command=$EMPTYRECYCLEBIN$
+comment=Empty recycle bin
+
+[W53]
+keywords=?hibernate
+command=$HIBERNATE$
+comment=Sets computer in hibernate mode
+
+[W54]
+keywords=?lock
+command=$LOCK$
+comment=Lock computer or switch user
+
+[W55]
+keywords=?logoff
+command=$LOGOFF$
+comment=Logoff current user
+
+[W56]
+keywords=?monitor
+command=$MONITOR$
+comment=Turns off monitor
+
+[W57]
+keywords=?restart
+command=$RESTART$
+comment=Restart windows
+
+[W58]
+keywords=?saveclipboard
+command=$SAVECLIPBOARD$
+comment=Save clipboard to a file
+
+[W59]
+keywords=?shutdown
+command=$SHUTDOWN$
+comment=Shutdown windows
+
+[W60]
+keywords=?standby
+command=$STANDBY$
+comment=Sets computer in standby mode
+
+[W61]
+keywords=rdp
+command=C:\WINDOWS\system32\mstsc.exe
+param=/v:
+
+[W62]
+keywords=map
+command=http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=$U$
+comment=Map on Google Maps
+
+[W63]
+keywords=atlas
+command=https://atlas.siroffices.com/listingdetail.aspx?id=$U$
+comment=Find listing in Atlas
+
+[W64]
+keywords=github
+command=C:\Users\Brian\Desktop\GitHub.appref-ms
+comment=GitHub
+
