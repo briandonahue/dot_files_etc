@@ -1,10 +1,79 @@
-" ---------- BASIC OPTIONS ----------
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" just gimme vim!
-set nocompatible
+" tell vim where to put its backup files
+set backupdir=C:\\Temp
 
-" load vim bundles using pathogen
-silent! call pathogen#runtime_append_all_bundles()
+" tell vim where to put swap files
+set dir=C:\\Temp
+"
+" set the runtime path to include Vundle and initialize
+set rtp+=~/vimfiles/bundle/Vundle.vim
+let path='~/vimfiles/bundle'
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'kchmck/vim-coffee-script.git'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'mattn/gist-vim'
+Plugin 'msanders/snipmate.vim.git'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdcommenter.git'
+Plugin 'timcharper/textile.vim.git'
+Plugin 'tpope/vim-cucumber.git'
+Plugin 'tpope/vim-endwise.git'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-git.git'
+Plugin 'tpope/vim-haml.git'
+Plugin 'tpope/vim-markdown.git'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-repeat.git'
+Plugin 'tpope/vim-surround.git'
+Plugin 'tpope/vim-vividchalk.git'
+Plugin 'tsaleh/vim-align.git'
+Plugin 'tsaleh/vim-shoulda.git'
+Plugin 'tsaleh/vim-supertab.git'
+Plugin 'tsaleh/vim-tcomment.git'
+Plugin 'vim-ruby/vim-ruby.git' 
+Plugin 'sukima/xmledit.git'
+Plugin 'elzr/vim-json'
+Plugin 'vim-scripts/Greplace.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+" Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+" Plugin 'user/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line" just gimme vim!
+
 
 " follow the leader
 let mapleader = ","
