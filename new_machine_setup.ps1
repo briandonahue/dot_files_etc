@@ -31,6 +31,7 @@ choco install lastpass
 choco install ccleaner
 choco install diffmerge
 choco install dropbox
+choco install microsoftsecurityessentials
 
 # browsers
 choco install GoogleChrome
