@@ -26,7 +26,7 @@
 [difftool]
 	prompt = false
 [push]
-	default = matching
+	default = current
 [credential]
 [mergetool "tortoisemerge"]
 	path = C:\\Program Files\\TortoiseGit\\bin\\tortoisegitmerge.exe
@@ -39,6 +39,11 @@
 	trustExitCode = true
 [mergetool "diffmerge"]
   cmd = 'C:\\Program Files\\SourceGear\\Common\\DiffMerge\\sgdm.exe' --merge -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" --title1="Mine" --title2="Merged" --title3="Theirs"
+  keepTemporaries = false
+  keepBackup = false
+	trustExitCode = false
+[mergetool "bc4"]
+  cmd = 'C:/Program Files (x86)/Beyond Compare 4/BComp.exe' \"$PWD/$LOCAL\" \"$PWD/$REMOTE\" \"$PWD/$BASE\" \"$PWD/$MERGED\"
   keepTemporaries = false
   keepBackup = false
 	trustExitCode = false

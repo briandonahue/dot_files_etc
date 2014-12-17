@@ -16,7 +16,7 @@ xcopy.exe ".\Console2\console.xml" "${Env:APPDATA}\console\" /E
 
 [Reflection.Assembly]::LoadWithPartialName('System.IO.Compression.FileSystem')
 
-foreach($sourceFile in [IO.Compression.ZipFile]::OpenRead("dejavu-fonts-ttf-2.34.zip").Entries)
+foreach($sourceFile in [System.IO.Compression.ZipFile]::OpenRead("dejavu-fonts-ttf-2.34.zip").Entries)
 {
     Copy-Item $sourceFile.FullName "c:\windows\fonts" -Force
 }
