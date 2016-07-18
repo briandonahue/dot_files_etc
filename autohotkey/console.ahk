@@ -1,24 +1,10 @@
-#k::
-DetectHiddenWindows, on
-IfWinExist ahk_class Console_2_Main
-{
-    IfWinActive ahk_class Console_2_Main
-          {
-                  WinHide ahk_class Console_2_Main
-                  WinActivate ahk_class Shell_TrayWnd
-          }
-    else
-          {
-                  WinShow ahk_class Console_2_Main
-                  WinActivate ahk_class Console_2_Main
-          }
-}
-else
-    run "C:\ProgramData\chocolatey\bin\Console.exe"
-DetectHiddenWindows, off
-return
+#SingleInstance force
 
-#+`::
+#+k::
+
+consoleX := A_ScreenWidth * .70
+consoleHeight := A_ScreenHeight
+
 DetectHiddenWindows, on
 IfWinExist ahk_class Console_2_Main
 {
@@ -34,7 +20,7 @@ IfWinExist ahk_class Console_2_Main
           }
 }
 else
-    run "C:\ProgramData\chocolatey\bin\consolecygwin"
+    Run, C:\Program Files\ConEmu\ConEmu64.exe -WndX %consoleX% -WndY 0 -WndH %consoleHeight%
 DetectHiddenWindows, off
 return
 
@@ -46,4 +32,5 @@ WinHide ahk_class Console_2_Main
 WinActivate ahk_class Shell_TrayWnd
 }
 */
+
 

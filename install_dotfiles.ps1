@@ -12,7 +12,9 @@ Get-ChildItem $ahkPath | ForEach-Object {
     $Shortcut.Save()
 }
 
-xcopy.exe ".\Console2\console.xml" "${Env:APPDATA}\console\" /E
+# xcopy.exe ".\Console2\console.xml" "${Env:APPDATA}\console\" /E
+
+cd ./
 
 [Reflection.Assembly]::LoadWithPartialName('System.IO.Compression.FileSystem')
 
