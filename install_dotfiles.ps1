@@ -1,3 +1,7 @@
+# TODO: it probably makes sense to install these as 
+# symlinks to this folder to keep in sync
+
+
 $ahkPath = "$env:HOMEPATH\autohotkey"
 Copy-Item .\autohotkey $ahkPath -Recurse -Force
 
