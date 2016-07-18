@@ -1,47 +1,44 @@
-iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # VS
-choco install VisualStudio2013Ultimate -InstallArguments '/AddRemoveFeatures=''WebTools SQL''' # /ProductKey={KEY}'
+# choco install VisualStudio2013Ultimate -InstallArguments '/AddRemoveFeatures=''WebTools SQL''' # /ProductKey={KEY}'
 
 # source control
-choco install git
+choco install git -y
 
 # create git bash shortcut
-$WshShell = New-Object -comObject WScript.Shell
-$Shortcut = $WshShell.CreateShortcut("${Env:ProgramFiles(x86)}\Git\Git Bash.lnk")
-$Shortcut.TargetPath = "${Env:ProgramFiles(x86)}\Git\Git Bash.vbs"
-$Shortcut.IconLocation = "${Env:ProgramFiles(x86)}\Git\etc\git.ico"
-$Shortcut.Save()
+# NOT SURE THIS IS NEEDED IN LATEST VERSION OF GIT
+# $WshShell = New-Object -comObject WScript.Shell
+# $Shortcut = $WshShell.CreateShortcut("${Env:ProgramFiles}\Git\Git Bash.lnk")
+# $Shortcut.TargetPath = "${Env:ProgramFiles}\Git\Git Bash.vbs"
+# $Shortcut.IconLocation = "${Env:ProgramFiles}\Git\etc\git.ico"
+# $Shortcut.Save()
 
-choco install SourceTree
+choco install SourceTree -y
 
 # utilities
-choco install 7zip
-choco install vim
-choco install FoxitReader
-choco install console2
-choco install autohotkey
-choco install fiddler4
-choco install resharper -version 7.1.3000.2254
-choco install NSSM
-choco install filezilla
-choco install xmlnotepad
-choco install treesizefree
-choco install lastpass
-choco install ccleaner
-choco install diffmerge
-choco install dropbox
-choco install microsoftsecurityessentials
+choco install 7zip -y
+choco install vim -y
+choco install FoxitReader -y
+choco install console2 -y
+choco install autohotkey -y
+choco install fiddler4 -y
+choco install NSSM -y
+choco install filezilla -y
+choco install xmlnotepad -y
+choco install treesizefree -y
+choco install 1password -y
+choco install ccleaner -y
+choco install diffmerge -y
+choco install dropbox -y
 
 # browsers
-choco install GoogleChrome
-choco install firefox
+choco install GoogleChrome -y
+choco install firefox -y
 
 
 # programming and DB
-choco install mongodb
-choco install RoboMongo
-choco install eventstore
+choco install mongodb -y
+choco install RoboMongo -y
 # choco install ruby
 # choco install ruby2.devkit
 # choco install nodejs.install
