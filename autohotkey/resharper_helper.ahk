@@ -1,3 +1,4 @@
+#SingleInstance force
 ;==========================
 ;Initialise
 ;==========================
@@ -9,57 +10,41 @@ SetTitleMatchMode 2
 ;==========================
 ;Process Move Down A Method
 ;==========================
-$!J::
-    Send, !{Down}
-return
+$!J::Send !{Down}
 
 ;==========================
 ;Process Move Up A Method
 ;==========================
-$!K::
-	Send, !{Up}
-return
+$!K::Send !{Up}
 
 ;==========================
 ;Process Move Method Up
 ;==========================
-$^+!K::
-    Send, ^+!{Up}
-return
+$^+!K::Send ^+!{Up}
 
 ;==========================
 ;Process Move Method Down
 ;==========================
-$^+!J::
-    Send, ^+!{Down}
-return
+$^+!J::Send ^+!{Down}
 
 ;==========================
 ;Process Go to next usage 
 ;==========================
-$+!J::
-    Send, ^!{Down}
-return
+$+!J::Send ^!{Down}
 
 ;==========================
 ;Process Go to previous usage 
 ;==========================
-$+!k::
-    Send, ^!{Up}
-return
+$+!k::Send ^!{Up}
 
 ;==========================
 ;Process Generate Code
 ;==========================
-$!I::
-    Send, !{Insert}
-return
+$!I::Send !{Insert}
 
 ;==========================
 ;Process Generate File
 ;==========================
-$^!I::
-    Send, ^!{Insert}
-return
+$^!I::Send ^!{Insert}
 
 

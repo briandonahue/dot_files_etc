@@ -1,5 +1,7 @@
 # TODO: it probably makes sense to install these as 
 # symlinks to this folder to keep in sync
+# AHK scripts need to be run as administrator on startup or will not work in 
+# windows that are run as administrator
 
 
 $ahkPath = "$env:HOMEPATH\autohotkey"
