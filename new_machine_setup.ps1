@@ -1,3 +1,5 @@
+# TODO: Script IIS settings install http://stackoverflow.com/questions/10522240/powershell-script-to-auto-install-of-iis-7-and-above
+# TODO: Script database and user restore for SIR?
 
 # VS
 # choco install VisualStudio2013Ultimate -InstallArguments '/AddRemoveFeatures=''WebTools SQL''' # /ProductKey={KEY}'

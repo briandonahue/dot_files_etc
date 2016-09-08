@@ -1,5 +1,6 @@
 #SingleInstance force
 
+
 #+k::
 
 consoleX := A_ScreenWidth * .70
