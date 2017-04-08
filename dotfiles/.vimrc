@@ -241,7 +241,7 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " turn on word wrap when editing text and markdown
-au BufRead,BufNewFile *.txt,*.md set wrap linebreak nolist textwidth=0 wrapmargin=0
+au BufRead,BufNewFile *.txt,*.md set wrap linebreak nolist textwidth=120 wrapmargin=0
 
 
 " ---------- COLORS ------------
