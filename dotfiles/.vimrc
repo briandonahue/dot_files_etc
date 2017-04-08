@@ -1,15 +1,16 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set ff=unix
+
 " tell vim where to put its backup files
-set backupdir=C:\\Temp
+set backupdir=$TMPDIR
 
 " tell vim where to put swap files
-set dir=C:\\Temp
-"
+set dir=$TMPDIR
+
 " set the runtime path to include Vundle and initialize
-set rtp+=~/vimfiles/bundle/Vundle.vim
-let path='~/vimfiles/bundle'
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -17,12 +18,20 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'elzr/vim-json'
 Plugin 'kchmck/vim-coffee-script.git'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'lambdatoast/elm.vim'
+Plugin 'maksimr/vim-jsbeautify'
 Plugin 'mattn/gist-vim'
-Plugin 'msanders/snipmate.vim.git'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/nerdcommenter.git'
+Plugin 'scrooloose/syntastic'
+Plugin 'sukima/xmledit.git'
 Plugin 'timcharper/textile.vim.git'
 Plugin 'tpope/vim-cucumber.git'
 Plugin 'tpope/vim-endwise.git'
@@ -34,14 +43,19 @@ Plugin 'tpope/vim-rails.git'
 Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-vividchalk.git'
+Plugin 'tpope/vim-vinegar.git'
 Plugin 'tsaleh/vim-align.git'
 Plugin 'tsaleh/vim-shoulda.git'
 Plugin 'tsaleh/vim-supertab.git'
-Plugin 'tsaleh/vim-tcomment.git'
+Plugin 'tomtom/tcomment_vim.git'
 Plugin 'vim-ruby/vim-ruby.git' 
-Plugin 'sukima/xmledit.git'
-Plugin 'elzr/vim-json'
 Plugin 'vim-scripts/Greplace.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'wakatime/vim-wakatime'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'mattn/emmet-vim'
+
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -74,6 +88,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line" just gimme vim!
 
+let g:syntastic_javascript_checkers = ['jsl']
+let g:vim_json_syntax_conceal = 0
 
 " follow the leader
 let mapleader = ","
@@ -189,6 +205,10 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 
 " ---------- MAPPINGS ----------
 
+" set F1 dumb help to ESC
+map <F1> <Esc>
+imap <F1> <Esc>
+
 " turn off that stupid highlight search
 nmap <silent> ,n :set invhls<CR>:set hls?<CR>
 
@@ -210,13 +230,26 @@ nmap <silent> ,sv :so $MYVIMRC<CR>
 map <silent> ,d :execute 'NERDTreeToggle ' . getcwd()<CR>
 map <silent> ,f :execute 'CommandTFlush'<CR>
 
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for json
+autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+" for jsx
+autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+" turn on word wrap when editing text and markdown
+au BufRead,BufNewFile *.txt,*.md set wrap linebreak nolist textwidth=0 wrapmargin=0
 
 
 " ---------- COLORS ------------
 
 " set color scheme
 if has("gui_running")
-    set guifont=DejaVu_Sans_Mono:h12
+    set guifont=DejaVu_Sans_Mono:h14
+"    set guifont=SF Mono Regular:h14
     set antialias
     colorscheme vividchalk
     set background=dark
@@ -235,3 +268,4 @@ if has("statusline")
  set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
 endif
 endif
+
