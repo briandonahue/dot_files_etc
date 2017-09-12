@@ -49,3 +49,7 @@
 	trustExitCode = false
 [credential]
 	helper = !'C:\\Users\\Brian\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
+[rerere]
+	enabled = true
+	autoupdate = true
+
