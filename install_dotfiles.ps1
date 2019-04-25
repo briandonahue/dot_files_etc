@@ -24,10 +24,10 @@ cd ./
 
 [Reflection.Assembly]::LoadWithPartialName('System.IO.Compression.FileSystem')
 
-foreach($sourceFile in [System.IO.Compression.ZipFile]::OpenRead("dejavu-fonts-ttf-2.34.zip").Entries)
-{
-    Copy-Item $sourceFile.FullName "c:\windows\fonts" -Force
-}
+# foreach($sourceFile in [System.IO.Compression.ZipFile]::OpenRead("dejavu-fonts-ttf-2.34.zip").Entries)
+# {
+#     Copy-Item $sourceFile.FullName "c:\windows\fonts" -Force
+# }
 
 
 # set-alias sz ${Env:ProgramFiles}\7zip\7z.exe

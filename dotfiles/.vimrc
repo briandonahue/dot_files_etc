@@ -4,10 +4,10 @@ filetype off                  " required
 set ff=unix
 
 " tell vim where to put its backup files
-set backupdir=$TMPDIR
+" set backupdir=$TMPDIR
 
 " tell vim where to put swap files
-set dir=$TMPDIR
+" set dir=$TMPDIR
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -16,29 +16,35 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Plugin 'ervandew/supertab'
 Plugin 'gmarik/Vundle.vim'
-
+Plugin 'godlygeek/tabular'
 Plugin 'elzr/vim-json'
 Plugin 'kchmck/vim-coffee-script.git'
+Plugin 'ianks/vim-tsx'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'jparise/vim-graphql'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'mattn/gist-vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'PProvost/vim-ps1'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/nerdcommenter.git'
 Plugin 'scrooloose/syntastic'
 Plugin 'sukima/xmledit.git'
 Plugin 'timcharper/textile.vim.git'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-cucumber.git'
 Plugin 'tpope/vim-endwise.git'
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'tpope/vim-git.git'
 Plugin 'tpope/vim-haml.git'
-Plugin 'tpope/vim-markdown.git'
+" Plugin 'tpope/vim-markdown.git'
 Plugin 'tpope/vim-rails.git'
 Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-surround.git'
@@ -46,16 +52,14 @@ Plugin 'tpope/vim-vividchalk.git'
 Plugin 'tpope/vim-vinegar.git'
 Plugin 'tsaleh/vim-align.git'
 Plugin 'tsaleh/vim-shoulda.git'
-Plugin 'tsaleh/vim-supertab.git'
 Plugin 'tomtom/tcomment_vim.git'
 Plugin 'vim-ruby/vim-ruby.git' 
 Plugin 'vim-scripts/Greplace.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'wakatime/vim-wakatime'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'mattn/emmet-vim'
-
+Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -88,7 +92,17 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line" just gimme vim!
 
-let g:syntastic_javascript_checkers = ['jsl']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'yarn lint -- '
+" let g:syntastic_javascript_checkers=['eslint']
+" let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 let g:vim_json_syntax_conceal = 0
 
 " follow the leader
@@ -241,31 +255,33 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " turn on word wrap when editing text and markdown
-au BufRead,BufNewFile *.txt,*.md set wrap linebreak nolist textwidth=120 wrapmargin=0
+au BufRead,BufNewFile *.txt,*.md set wrap linebreak nolist textwidth=0 wrapmargin=1
 
 
 " ---------- COLORS ------------
 
 " set color scheme
 if has("gui_running")
-    set guifont=DejaVu_Sans_Mono:h14
-"    set guifont=SF Mono Regular:h14
-    set antialias
-    colorscheme vividchalk
-    set background=dark
+  set renderoptions=type:directx
+  set encoding=utf-8
+  set guifont=Fira_Code:h12
 
-    if !exists("g:vimrcloaded")
-        winpos 0 0
-        if ! &diff
-            winsize 140 90
-        else
-            winsize 227 90
-        endif
-        let g:vimrcloaded = 1
-    endif
+  set antialias
+  colorscheme vividchalk
+  set background=dark
 
-if has("statusline")
- set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
-endif
+  if !exists("g:vimrcloaded")
+      winpos 0 0
+      if ! &diff
+          winsize 140 90
+      else
+          winsize 227 90
+      endif
+      let g:vimrcloaded = 1
+  endif
+
+  if has("statusline")
+   set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+  endif
 endif
 
