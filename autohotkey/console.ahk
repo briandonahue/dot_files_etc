@@ -10,17 +10,17 @@ consoleHeight := A_ScreenHeight - 40
 
 
 DetectHiddenWindows, on
-IfWinExist ahk_class Console_2_Main
+If WinExist("ahk_class VirtualConsoleClass")
 {
-    IfWinActive ahk_class Console_2_Main
+    If WinActive("ahk_class VirtualConsoleClass")
           {
-                  WinHide ahk_class Console_2_Main
+                  WinHide ahk_class VirtualConsoleClass
                   WinActivate ahk_class Shell_TrayWnd
           }
     else
           {
-                  WinShow ahk_class Console_2_Main
-                  WinActivate ahk_class Console_2_Main
+                  WinShow ahk_class VirtualConsoleClass
+                  WinActivate ahk_class VirtualConsoleClass
           }
 }
 else
@@ -28,5 +28,4 @@ else
 DetectHiddenWindows, off
 return
 
-#IfWinActive ahk_class Console_2_Main
 
