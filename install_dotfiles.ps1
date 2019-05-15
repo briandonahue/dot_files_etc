@@ -18,7 +18,7 @@ Get-ChildItem $ahkPath | ForEach-Object {
     $Shortcut.Save()
 }
 
-# xcopy.exe ".\Console2\console.xml" "${Env:APPDATA}\console\" /E
+ xcopy.exe ".\conemu.xml" "${Env:APPDATA}\ConEmu\conemu.xml" /E
 
 cd ./
 
